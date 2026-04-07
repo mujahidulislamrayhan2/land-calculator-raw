@@ -1,0 +1,23 @@
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Moving grid (map effect) */
+@keyframes moveGrid {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, -50px);
+  }
+}
+
+/* Input focus animation */
+input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.6);
+  transform: scale(1.03);
+}
