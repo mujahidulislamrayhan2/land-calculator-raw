@@ -1,0 +1,18 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:#1f4451;
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  margin-top: 60px;
+}
