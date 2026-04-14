@@ -129,7 +129,7 @@ export default function App() {
 
    <Link to="/">
   <button className="manual-btn">
-    🧮 Manual Calculator
+    🧮 ম্যানুয়াল ক্যালকুলেটর
   </button>
 </Link>
 

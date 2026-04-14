@@ -68,7 +68,7 @@ const [totalDag, setTotalDag] = useState("");
 <div className="homebtn" >
     <Link to="/addAndSubstract">
   <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
-    🧮 ADD/Substract Calculator
+    🧮 জমি যোগ/বিয়োগ
   </button>
 </Link>
 </div>
