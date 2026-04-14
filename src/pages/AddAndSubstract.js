@@ -63,7 +63,7 @@ function Calculator({ type }) {
 
     <div className={`calculator ${type}`}>
       <h2 style={{ textAlign: "center", marginBottom: "14px" }}>
-        {type === "add" ? "➕ Add Tracker" : "➖ Subtract Tracker"}
+        {type === "add" ? "➕ জমি যোগ " : "➖ জমি বিয়োগ "}
       </h2>
 
       <input
