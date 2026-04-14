@@ -127,7 +127,7 @@ export default function App() {
 
 <div className="homebtn">
 
-   <Link to="/manualcalculator">
+   <Link to="/">
   <button className="manual-btn">
     🧮 Manual Calculator
   </button>

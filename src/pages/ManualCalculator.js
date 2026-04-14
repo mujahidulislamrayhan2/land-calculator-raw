@@ -1,16 +1,6 @@
-
-
-
-// Land Manual cal //
-
-
-
-
 import React, { useState } from "react";
 import { Link } from "react-router";
-// import Substract from "./substract";
-// import { Route, Routes } from "react-router";
-
+import "./manual.css";
 export default function Home() {
 const [totalDag, setTotalDag] = useState("");
   const [result, setResult] = useState("");
@@ -69,29 +59,30 @@ const [totalDag, setTotalDag] = useState("");
   };
 
   return (
-    <div style={styles.wrapper}>
+    <div className="mapper">
+    <div className="wrapper">
         {/* <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/substract' element={<Substract/> } />
         </Routes> */}
 <div className="homebtn" >
-    <Link to="/">
+    <Link to="/addAndSubstract">
   <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
     🧮 ADD/Substract Calculator
   </button>
 </Link>
 </div>
 
-      <div style={styles.container}>
-        <h2 style={styles.title}>📍 Land Calculator</h2>
+      <div className="container">
+        <h2 className="title">📍 Land Calculator</h2>
 
-        <div style={styles.row}>
+        <div className="row">
           <input
             type="text"
             placeholder="দাগের মোট পরিমান"
             value={totalDag}
             onChange={handleDagChange}
-            style={styles.input}
+           className="inputm"
           />
 
           <input
@@ -99,7 +90,7 @@ const [totalDag, setTotalDag] = useState("");
             placeholder="অত্র খতিয়ানের অংশ"
             value={result}
             readOnly
-            style={{ ...styles.input, background: "#eaffea", fontWeight: "bold" }}
+           className="inputm" style={{ background: "#eaffea", fontWeight: "bold"}}
           />
 
           <input
@@ -107,48 +98,12 @@ const [totalDag, setTotalDag] = useState("");
             placeholder="জমির পরিমান"
             value={landAll}
             onChange={handleLandAllChange}
-            style={styles.input}
+           className="inputm"
           />
         </div>
       </div>
     </div>
+    </div>
   );
 }
 
-const styles = {
-  wrapper: {
-    height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    background: "linear-gradient(135deg, #4facfe, #00f2fe)",
-  },
-
-  container: {
-    padding: "20px",
-    borderRadius: "12px",
-    background: "#fff",
-    boxShadow: "0 5px 20px rgba(0,0,0,0.2)",
-  },
-
-  title: {
-    textAlign: "center",
-    marginBottom: "15px",
-  },
-
-  row: {
-    display: "flex",
-    gap: "10px",
-    flexWrap: "wrap", // mobile responsive (will stack if needed)
-    justifyContent: "center",
-  },
-
-  input: {
-    padding: "10px",
-    width: "180px",
-    fontSize: "14px",
-    borderRadius: "6px",
-    border: "1px solid #ccc",
-    outline: "none",
-  },
-};

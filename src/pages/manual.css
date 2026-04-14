@@ -1,0 +1,44 @@
+.mapper {
+    background-image: url(./dhaka_midnight_blue_20260414_003308.png) ;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+
+  .wrapper {
+    height: 100vh ;
+    display: flex ;
+    justify-content : center ;
+    align-items : center ;
+    /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+  }
+
+  .container {
+    padding:20px;
+    border-radius: 12px;
+    background: #ffffff36;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: wheat;
+  }
+
+  .row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap ;  
+    justify-content: "center",
+  }
+
+  .inputm {
+    padding: 10px;
+    width: 180px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+        background-color: wheat;
+  }

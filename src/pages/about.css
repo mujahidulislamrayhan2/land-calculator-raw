@@ -1,0 +1,51 @@
+.about-container a {
+  color: #ffd369;
+  text-decoration: none;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+              url("./dhaka_midnight_blue_20260414_003308.png");
+
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.about-container {
+  max-width: 850px;
+  padding: 35px;
+  color: white;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.about-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-container h2 {
+  margin-top: 25px;
+  color: #ffd369;
+}
+
+.about-container ul {
+  padding-left: 20px;
+}
+
+.about-container li {
+  margin-bottom: 8px;
+}

@@ -8,18 +8,20 @@ import About from './pages/about';
 import  Contact  from './pages/contact';
 import Navbar from './pages/navbar'
 import Footer from './pages/footer';
+import Privacy from './pages/privacy';
 
 export default function App() {
 
 return (
   <>
-  <Navbar/>
+  <Navbar/> 
   <Routes>
      
-    <Route path='/' element={<AddAndSubstract/>} />
-    <Route path='/manualcalculator' element={<ManualCalculator/> } />
+    <Route path='/' element={<ManualCalculator/>} />
+    <Route path='/addAndSubstract' element={<AddAndSubstract/> } />
     <Route path='/about' element={<About/> } />
     <Route path='/contact' element={<Contact/> } />
+    <Route path="/privacy" element={<Privacy />} />
   </Routes>
 
   <Footer/>
