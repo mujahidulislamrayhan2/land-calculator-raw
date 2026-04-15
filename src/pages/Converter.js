@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./converter.css";
 import { Link } from "react-router";
 
@@ -15,10 +15,6 @@ const toBangla = (num) => {
   return num.toString().replace(/\d/g, (d) => bn[d]);
 };
 
-export default function App() {
-  const [input, setInput] = useState("");
-  const [unit, setUnit] = useState("shotok");
-  const [values, setValues] = useState({});
 
   const rates = {
     acre: 100,
@@ -26,7 +22,7 @@ export default function App() {
     katha: 1.65,
     bigha: 33,
     ana: 2.0625,
-    gonda: 0.825,
+    // gonda: 0.825,
   };
 
   const names = {
@@ -35,35 +31,41 @@ export default function App() {
     katha: "কাঠা",
     bigha: "বিঘা",
     ana: "আনা",
-    gonda: "গন্ডা",
+    // gonda: "গন্ডা",
   };
+
+export default function App() {
+  const [input, setInput] = useState("");
+  const [unit, setUnit] = useState("shotok");
+  const [values, setValues] = useState({});
+
+
 
   // convert all
-  const convertAll = (val, unit) => {
-    if (!val) {
-      setValues({});
-      return;
-    }
+const convertAll = useCallback((val, unit) => {
+  if (!val) {
+    setValues({});
+    return;
+  }
 
-    const num = parseFloat(toEnglish(val));
-    if (isNaN(num)) return;
+  const num = parseFloat(toEnglish(val));
+  if (isNaN(num)) return;
 
-    const shotok = num * rates[unit];
+  const shotok = num * rates[unit];
 
-    let result = {};
-    Object.keys(rates).forEach((key) => {
-      const v = (shotok / rates[key]).toFixed(4);
-      result[key] = toBangla(v); // ALWAYS Bangla output
-    });
+  let result = {};
+  Object.keys(rates).forEach((key) => {
+    const v = (shotok / rates[key]).toFixed(4);
+    result[key] = toBangla(v);
+  });
 
-    setValues(result);
+  setValues(result);
 
-    // save last
-    localStorage.setItem(
-      "lastConversion",
-      JSON.stringify({ val, unit })
-    );
-  };
+  localStorage.setItem(
+    "lastConversion",
+    JSON.stringify({ val, unit })
+  );
+}, []);
 
   const handleInput = (e) => {
     const val = e.target.value;
@@ -86,15 +88,15 @@ export default function App() {
   };
 
   // load last
-  useEffect(() => {
-    const saved = localStorage.getItem("lastConversion");
-    if (saved) {
-      const { val, unit } = JSON.parse(saved);
-      setInput(val);
-      setUnit(unit);
-      convertAll(val, unit);
-    }
-  }, []);
+ useEffect(() => {
+  const saved = localStorage.getItem("lastConversion");
+  if (saved) {
+    const { val, unit } = JSON.parse(saved);
+    setInput(val);
+    setUnit(unit);
+    convertAll(val, unit);
+  }
+}, [convertAll]);
 
   const clearAll = () => {
     setInput("");
