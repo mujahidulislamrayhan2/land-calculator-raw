@@ -132,6 +132,12 @@ export default function App() {
     🧮 ম্যানুয়াল ক্যালকুলেটর
   </button>
 </Link>
+   <Link to="/converter">
+  <button className="manual-btn">
+    🧮 জমির পরিমান কনভার্টার (একর,শতক,কাঠা,বিঘা,আনা,গন্ডা)
+
+  </button>
+</Link>
 
 </div>
 

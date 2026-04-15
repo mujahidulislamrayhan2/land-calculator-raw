@@ -9,7 +9,7 @@ import  Contact  from './pages/contact';
 import Navbar from './pages/navbar'
 import Footer from './pages/footer';
 import Privacy from './pages/privacy';
-
+import Converter from './pages/Converter';
 export default function App() {
 
 return (
@@ -22,6 +22,7 @@ return (
     <Route path='/about' element={<About/> } />
     <Route path='/contact' element={<Contact/> } />
     <Route path="/privacy" element={<Privacy />} />
+    <Route path="/converter" element={<Converter />} />
   </Routes>
 
   <Footer/>

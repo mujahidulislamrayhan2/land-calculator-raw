@@ -61,6 +61,10 @@ const [totalDag, setTotalDag] = useState("");
   return (
     <div className="mapper">
     <div className="wrapper">
+
+
+
+
         {/* <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/substract' element={<Substract/> } />
@@ -68,9 +72,15 @@ const [totalDag, setTotalDag] = useState("");
 <div className="homebtn" >
     <Link to="/addAndSubstract">
   <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
-    🧮 জমি যোগ/বিয়োগ
+    🧮 সহজে হোল্ডিং জমি যোগ/বিয়োগ ক্যালকুলেটরে যান
   </button>
 </Link>
+    <Link to="/converter">
+  <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
+    🧮 🧮 জমির পরিমান কনভার্টার (একর,শতক,কাঠা,বিঘা,আনা,গন্ডা)
+  </button>
+</Link>
+
 </div>
 
       <div className="container">
@@ -103,6 +113,9 @@ const [totalDag, setTotalDag] = useState("");
         </div>
       </div>
     </div>
+    
+      <script async="async" data-cfasync="false" src="https://pl29154115.profitablecpmratenetwork.com/be348753f2d821e8940e89676b6e39b5/invoke.js"></script>
+<div id="container-be348753f2d821e8940e89676b6e39b5"></div>
     </div>
   );
 }
