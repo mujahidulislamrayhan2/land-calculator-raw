@@ -110,7 +110,7 @@ const convertAll = useCallback((val, unit) => {
 
     <div className="gotobtn">
           <Link to="/addAndSubstract">
-          <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
+          <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #6e6d99, #6aa2d6)" }}  >
             🧮 সহজে হোল্ডিং জমি যোগ/বিয়োগ ক্যালকুলেটরে যান
           </button>
         </Link>

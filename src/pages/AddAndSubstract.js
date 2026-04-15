@@ -133,7 +133,7 @@ export default function App() {
   </button>
 </Link>
    <Link to="/converter">
-  <button className="manual-btn">
+  <button className="manual-btn" style={{ background: "linear-gradient(135deg, #7c7514, #a18d56)" }}  >
     🧮 জমির পরিমান কনভার্টার (একর,শতক,কাঠা,বিঘা,আনা,গন্ডা)
 
   </button>
