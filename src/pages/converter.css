@@ -3,18 +3,31 @@ body {
   font-family: Arial;
 }
 
+.converter{
+   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+              url("./dhaka_midnight_blue_20260414_003308.png");
+
+  background-size: cover;
+  background-position: center bottom;
+  
+}
+
+.gotobtn{
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
-              url("./dhaka_midnight_blue_20260414_003308.png");
-
-  background-size: cover;
-  background-position: center bottom;
+ 
 }
+
+
 
 .card {
   width: 340px;

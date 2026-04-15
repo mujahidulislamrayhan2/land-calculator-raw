@@ -104,20 +104,20 @@ export default function App() {
 
   return (
 
-    <>
+    <div className="converter">
 
-    {/* <div className="gotobtn">
+    <div className="gotobtn">
           <Link to="/addAndSubstract">
           <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
             🧮 সহজে হোল্ডিং জমি যোগ/বিয়োগ ক্যালকুলেটরে যান
           </button>
         </Link>
-            <Link to="/converter">
+            <Link to="/">
           <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
-            🧮 🧮 জমির পরিমান কনভার্টার (একর,শতক,কাঠা,বিঘা,আনা,গন্ডা)
+            🧮 ম্যানুয়াল ক্যালকুলেটরে যান
           </button>
         </Link>
-        </div> */}
+        </div>
     <div className="app">
         
       <div className="card">
@@ -156,6 +156,6 @@ export default function App() {
 
       </div>
     </div>
-    </>
+    </div>
   );
 }
