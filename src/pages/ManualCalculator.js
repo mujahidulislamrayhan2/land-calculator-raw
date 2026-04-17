@@ -71,12 +71,12 @@ const [totalDag, setTotalDag] = useState("");
         </Routes> */}
 <div className="homebtn" >
     <Link to="/addAndSubstract">
-  <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #93b39d, #62b989)" }}  >
+  <button className="manual-btn"  style={{ background: "linear-gradient(135deg, #2cb349, #beb23f)" }}  >
     🧮 সহজে হোল্ডিং জমি যোগ/বিয়োগ ক্যালকুলেটরে যান
   </button>
 </Link>
     <Link to="/converter">
-  <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #7c144d, #bd53b4)" }}  >
+  <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #cf298f, #9c1d7c)" }}  >
     🧮 🧮 জমির পরিমান কনভার্টার (একর,শতক,কাঠা,বিঘা,আনা,গন্ডা)
   </button>
 </Link>

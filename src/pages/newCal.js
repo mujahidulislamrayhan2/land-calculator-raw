@@ -22,6 +22,21 @@ const toEnglishNumber = (str) => {
     .join("");
 };
 
+// ✅ INPUT = ACRE → convert to everything
+const convertToLandFormat = (acreValue) => {
+  if (isNaN(acreValue)) return null;
+
+  const shotok = acreValue * 100;
+
+  return {
+    acre: acreValue,
+    shotok: shotok,
+    katha: shotok / 1.65,
+    bigha: shotok / 33,
+    ana: shotok / 0.825,
+  };
+};
+
 function Calculator({ type }) {
   const [top, setTop] = useState("");
   const [bottom, setBottom] = useState("");
@@ -57,20 +72,22 @@ function Calculator({ type }) {
     if (e.key === "Enter") calculate();
   };
 
+  const lastResult =
+    history.length > 0 ? history[history.length - 1].result : null;
+
+  const land = convertToLandFormat(lastResult);
+
   return (
-
-   
-
     <div className={`calculator ${type}`}>
       <h2 style={{ textAlign: "center", marginBottom: "14px" }}>
-        {type === "add" ? "➕ জমি যোগ " : "➖ জমি বিয়োগ "}
+        {type === "add" ? "➕ জমি যোগ (একর) " : "➖ জমি বিয়োগ (একর) "}
       </h2>
 
       <input
         onKeyDown={handleKey}
         value={top}
         onChange={(e) => setTop(e.target.value)}
-        placeholder="Top value"
+        placeholder="Top value (একর)"
         className="input"
       />
 
@@ -78,9 +95,7 @@ function Calculator({ type }) {
         onKeyDown={handleKey}
         value={bottom}
         onChange={(e) => setBottom(e.target.value)}
-        placeholder={
-          type === "add" ? "Add value" : "Subtract value"
-        }
+        placeholder={type === "add" ? "Add value (একর)" : "Subtract value (একর)"}
         className="input"
       />
 
@@ -117,6 +132,27 @@ function Calculator({ type }) {
           </div>
         ))}
       </div>
+
+      {/* ✅ FINAL OUTPUT */}
+      {lastResult !== null && land && (
+        <div
+          style={{
+            marginTop: "15px",
+            padding: "12px",
+            background: "#222",
+            borderRadius: "10px",
+            color: "#fff",
+            fontWeight: "bold",
+            lineHeight: "1.8",
+          }}
+        >
+          একর: {toBanglaNumber(land.acre.toFixed(10))} <br />
+          শতক: {toBanglaNumber(land.shotok.toFixed(10))} <br />
+          কাঠা: {toBanglaNumber(land.katha.toFixed(10))} <br />
+          বিঘা: {toBanglaNumber(land.bigha.toFixed(10))} <br />
+          আনা: {toBanglaNumber(land.ana.toFixed(10))}
+        </div>
+      )}
     </div>
   );
 }
@@ -124,22 +160,29 @@ function Calculator({ type }) {
 export default function App() {
   return (
     <div className="app-container">
+      <div className="homebtn">
+        <Link to="/">
+          <button
+            className="manual-btn"
+            style={{
+              background: "linear-gradient(135deg, #822a94, #452f68)",
+            }}
+          >
+            🧮 ম্যানুয়াল ক্যালকুলেটর
+          </button>
+        </Link>
 
-<div className="homebtn">
-
-   <Link to="/">
-  <button className="manual-btn" style={{ background: "linear-gradient(135deg, #822a94, #452f68)" }} >
-    🧮 ম্যানুয়াল ক্যালকুলেটর
-  </button>
-</Link>
-   <Link to="/converter">
-  <button className="manual-btn" style={{ background: "linear-gradient(135deg, #cf298f, #9c1d7c)" }}  >
-    🧮 জমির পরিমান কনভার্টার (একর,শতক,কাঠা,বিঘা,আনা,গন্ডা)
-
-  </button>
-</Link>
-
-</div>
+        <Link to="/converter">
+          <button
+            className="manual-btn"
+            style={{
+              background: "linear-gradient(135deg, #cf298f, #9c1d7c)",
+            }}
+          >
+            🧮 জমির পরিমান কনভার্টার
+          </button>
+        </Link>
+      </div>
 
       <Calculator type="add" />
       <Calculator type="subtract" />

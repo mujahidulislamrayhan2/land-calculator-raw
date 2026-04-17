@@ -10,6 +10,7 @@ import Navbar from './pages/navbar'
 import Footer from './pages/footer';
 import Privacy from './pages/privacy';
 import Converter from './pages/Converter';
+import Newcal from './pages/newCal';
 export default function App() {
 
 return (
@@ -23,6 +24,7 @@ return (
     <Route path='/contact' element={<Contact/> } />
     <Route path="/privacy" element={<Privacy />} />
     <Route path="/converter" element={<Converter />} />
+    <Route path="/newcal" element={<Newcal />} />
   </Routes>
 
   <Footer/>
