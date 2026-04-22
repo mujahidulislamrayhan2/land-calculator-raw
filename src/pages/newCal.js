@@ -159,6 +159,7 @@ function Calculator({ type }) {
 
 export default function App() {
   return (
+    <div>
     <div className="app-container">
       <div className="homebtn">
         <Link to="/">
@@ -186,6 +187,16 @@ export default function App() {
 
       <Calculator type="add" />
       <Calculator type="subtract" />
+
+      
+
+    </div>
+
+  <div className="adds"  >
+      <script async="async" data-cfasync="false" src="https://pl29154115.profitablecpmratenetwork.com/be348753f2d821e8940e89676b6e39b5/invoke.js"></script>
+<div id="container-be348753f2d821e8940e89676b6e39b5"></div>
+
+   </div>
     </div>
   );
 }

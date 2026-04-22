@@ -27,7 +27,11 @@ body {
  
 }
 
+.adds{
 
+  display: block;
+      background: linear-gradient(135deg, #020617, #0f172a, #022c22);
+}
 
 .card {
   width: 340px;
