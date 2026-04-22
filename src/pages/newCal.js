@@ -168,7 +168,7 @@ export default function App() {
               background: "linear-gradient(135deg, #822a94, #452f68)",
             }}
           >
-            🧮 ম্যানুয়াল ক্যালকুলেটর
+            Ⓜ️ ম্যানুয়াল ক্যালকুলেটর
           </button>
         </Link>
 
@@ -179,7 +179,7 @@ export default function App() {
               background: "linear-gradient(135deg, #cf298f, #9c1d7c)",
             }}
           >
-            🧮 জমির পরিমান কনভার্টার
+            🔁 জমির পরিমান কনভার্টার
           </button>
         </Link>
       </div>

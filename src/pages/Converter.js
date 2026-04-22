@@ -109,14 +109,14 @@ const convertAll = useCallback((val, unit) => {
     <div className="converter">
 
     <div className="gotobtn">
-          <Link to="/addAndSubstract">
-          <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #2cb349, #beb23f)" }}  >
-            🧮 সহজে হোল্ডিং জমি যোগ/বিয়োগ ক্যালকুলেটরে যান
-          </button>
+          <Link to="/newcal">
+          <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #822a94, #452f68)" }}  >
+            Ⓗ হোল্ডিং জমি যোগ/বিয়োগ ক্যালকুলেটর 
+          </button> 
         </Link>
             <Link to="/">
-          <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #822a94, #452f68)" }} >
-            🧮 ম্যানুয়াল ক্যালকুলেটরে যান
+          <button className="manual-btn"   style={{ background: "linear-gradient(135deg, #cf298f, #9c1d7c)" }} >
+            Ⓜ️ ম্যানুয়াল ক্যালকুলেটর
           </button>
         </Link>
         </div>
